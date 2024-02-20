@@ -79,11 +79,12 @@ If the credentials match, the user is authenticated, and access is granted accor
 
 # UserController API
 
-## User Sign-Up
+## Sign Up
 - **Endpoint:** `POST /signup`
 - **Description:** Register a new user.
 - **Request Body:** User object.
-- **Returns:** Created User object.
-- **Error Response:**
-  - None.
+- **Returns:**
+  - `201 Created`: If the user is successfully created.
+    - Body: User object.
+  - `500 Internal Server Error`: If there is an error during user creation
 
