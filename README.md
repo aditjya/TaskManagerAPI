@@ -25,12 +25,7 @@ When a user attempts to access a secured resource, the SecurityFilterChain inter
 The DaoAuthenticationProvider uses the configured UserDetailsService to load user details based on the provided username.<br>
 The password provided by the user is hashed using the configured PasswordEncoder, and the hashed value is compared to the stored password hash.<br>
 If the credentials match, the user is authenticated, and access is granted according to the defined roles and access rules.</p>
-<h4><b>Available EndPoints</b></h4>
-## Get All Tasks
-- **Endpoint:** `GET /api/tasks`
-- **Permission Required:** ROLE_ADMIN
-- **Description:** Retrieve a list of all tasks.
-- **Returns:** List of Task objects.
+##<h4><b><strong>Available EndPoints</strong></b></h4>
 
 ## Get Task by ID
 - **Endpoint:** `GET /api/tasks/{id}`
@@ -71,6 +66,16 @@ If the credentials match, the user is authenticated, and access is granted accor
 - **Returns:** No content.
 - **Error Response:**
   - 404 Not Found: If the task with the specified ID is not found.
+ 
+    ## Get Tasks for User (Admin)
+- **Endpoint:** `GET /api/tasks/user/{userId}/tasks`
+- **Permission Required:** ROLE_ADMIN
+- **Description:** Retrieve a list of tasks for a specific user.
+- **Parameters:**
+  - `{userId}`: ID of the user to retrieve tasks for.
+- **Returns:** List of Task objects.
+
+ 
 
 # UserController API
 
