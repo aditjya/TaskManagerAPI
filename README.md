@@ -25,7 +25,8 @@ When a user attempts to access a secured resource, the SecurityFilterChain inter
 The DaoAuthenticationProvider uses the configured UserDetailsService to load user details based on the provided username.<br>
 The password provided by the user is hashed using the configured PasswordEncoder, and the hashed value is compared to the stored password hash.<br>
 If the credentials match, the user is authenticated, and access is granted according to the defined roles and access rules.</p>
-##<h4><b><strong>Available EndPoints</strong></b></h4>
+
+##Available EndPoints
 
 ## Get Task by ID
 - **Endpoint:** `GET /api/tasks/{id}`
