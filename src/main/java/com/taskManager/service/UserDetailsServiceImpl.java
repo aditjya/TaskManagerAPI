@@ -35,6 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     public String addUser(User user){
+         User.setUsername(userName);
         User.setPassword(PasswordEncoder.Encode(user.getPassword()));
         userRepository.save(User);
         return "User Added";
