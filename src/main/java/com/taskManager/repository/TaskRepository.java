@@ -22,4 +22,8 @@ public interface TaskRepository extends JpaRepository {
     default Long findByUserId(Long userId){
         return userId;
     }
+
+    public List<Task> getTasksForUser(Long userId) {
+        return taskRepository.findByUserId(userId);
+    }
 }
