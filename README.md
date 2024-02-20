@@ -6,5 +6,5 @@
 </p>
 
 <h3>Authentication Procedures</h3>
-<P>1. Used Spring Security Dependency
+<P>the authentication procedure implemented in a Spring Security application using Java configuration. The application follows industry best practices for authentication and authorization, incorporating role-based access control, HTTP basic authentication, and stateless session management.
 </P>
