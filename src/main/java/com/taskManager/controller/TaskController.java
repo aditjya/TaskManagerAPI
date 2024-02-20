@@ -19,11 +19,6 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @GetMapping
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public List<Task> getAllTasks() {
-        return taskService.getAllTasks();
-    }
 
     @GetMapping("/user/{userId}/tasks")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
