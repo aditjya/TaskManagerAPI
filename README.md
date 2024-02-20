@@ -75,9 +75,8 @@ If the credentials match, the user is authenticated, and access is granted accor
 - **Parameters:**
   - `{userId}`: ID of the user to retrieve tasks for.
 - **Returns:** List of Task objects.
-- 
-- api/tasks?page=0&size=10 - Retrieves the first page with 10 tasks.
-/api/tasks?page=1&size=5 - Retrieves the second page with 5 tasks.
+-  api/tasks?page=0&size=10 - Retrieves the first page with 10 tasks.<br>
+-  api/tasks?page=1&size=5 - Retrieves the second page with 5 tasks.
 
 
 # UserController API
