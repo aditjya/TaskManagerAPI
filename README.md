@@ -5,7 +5,7 @@
 3.MySQL
 </p>
 
-<h3>Authentication Procedure</h3>
+<div class="box"><h3>Authentication Procedure</h3>
 <P> The application follows industry best practices for authentication and authorization, incorporating role-based access control, HTTP basic authentication, and stateless session management.
 </P>
 <p><b>1. UserDetailsService Bean -</b>
@@ -18,7 +18,7 @@
   The PasswordEncoder bean defines the password encoder used for hashing and verifying passwords. In this case, it utilizes the BCryptPasswordEncoder.</p>
 <p></p>
 <p><b>4. AuthenticationProvider Bean -</b>
-  The AuthenticationProvider bean configures an instance of DaoAuthenticationProvider. It associates the user details service and password encoder, making it responsible for authenticating users, verifying credentials, and loading user details.</p>
+  The AuthenticationProvider bean configures an instance of DaoAuthenticationProvider. It associates the user details service and password encoder, making it responsible for authenticating users, verifying credentials, and loading user details.</p></div>
 <p></p>
 <p><b>Authentication Flow</b>
 When a user attempts to access a secured resource, the SecurityFilterChain intercepts the request.<br>
