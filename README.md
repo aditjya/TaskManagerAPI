@@ -66,16 +66,14 @@ If the credentials match, the user is authenticated, and access is granted accor
 - **Returns:** No content.
 - **Error Response:**
   - 404 Not Found: If the task with the specified ID is not found.
- 
-    ## Get Tasks for User (Admin)
+
+   ## Get Tasks for User (Admin)
 - **Endpoint:** `GET /api/tasks/user/{userId}/tasks`
 - **Permission Required:** ROLE_ADMIN
 - **Description:** Retrieve a list of tasks for a specific user.
 - **Parameters:**
   - `{userId}`: ID of the user to retrieve tasks for.
-- **Returns:** List of Task objects.
-
- 
+- **Returns:** List of Task objects. 
 
 # UserController API
 
