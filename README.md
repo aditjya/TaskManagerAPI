@@ -20,11 +20,8 @@
 <p><b>4. AuthenticationProvider Bean -</b>
   The AuthenticationProvider bean configures an instance of DaoAuthenticationProvider. It associates the user details service and password encoder, making it responsible for authenticating users, verifying credentials, and loading user details.</p></div>
 <p></p>
-<p><b>Authentication Flow</b>
+<p><b>Authentication Flow</b><br>
 When a user attempts to access a secured resource, the SecurityFilterChain intercepts the request.<br>
-
 The DaoAuthenticationProvider uses the configured UserDetailsService to load user details based on the provided username.<br>
-
 The password provided by the user is hashed using the configured PasswordEncoder, and the hashed value is compared to the stored password hash.<br>
-
 If the credentials match, the user is authenticated, and access is granted according to the defined roles and access rules.</p>
