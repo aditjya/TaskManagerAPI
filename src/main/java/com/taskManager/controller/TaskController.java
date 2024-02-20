@@ -25,6 +25,12 @@ public class TaskController {
         return taskService.getAllTasks();
     }
 
+    @GetMapping("/user/{userId}/tasks")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public List<Task> getTasksForUser(@PathVariable Long userId) {
+        return taskService.getTasksForUser(userId);
+    }
+
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
