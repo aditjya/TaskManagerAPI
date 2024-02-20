@@ -18,8 +18,11 @@ public class UserController {
     private UserDetailsService userDetailsService;
 
     @PostMapping("/signup")
-    public ResponseEntity<User> signUp(@RequestBody User user) {
-        User createdUser = userDetailsService.addUser(user);
+public ResponseEntity<User> signUp(@RequestBody User user) {
+    User createdUser = userDetailsService.addUser(user);
+    if (createdUser != null) {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+    } else {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 }
