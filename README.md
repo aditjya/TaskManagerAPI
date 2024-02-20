@@ -74,7 +74,11 @@ If the credentials match, the user is authenticated, and access is granted accor
 - **Description:** Retrieve a list of tasks for a specific user.
 - **Parameters:**
   - `{userId}`: ID of the user to retrieve tasks for.
-- **Returns:** List of Task objects. 
+- **Returns:** List of Task objects.
+- 
+- api/tasks?page=0&size=10 - Retrieves the first page with 10 tasks.
+/api/tasks?page=1&size=5 - Retrieves the second page with 5 tasks.
+
 
 # UserController API
 
@@ -86,4 +90,5 @@ If the credentials match, the user is authenticated, and access is granted accor
   - `201 Created`: If the user is successfully created.
     - Body: User object.
   - `500 Internal Server Error`: If there is an error during user creation
+ 
 
